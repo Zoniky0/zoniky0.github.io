@@ -101,6 +101,35 @@ footer {
   color: #333;
 }
 
+/* Gradient Button with Rounded Corners */
+.button-gradient {
+    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button-gradient:hover {
+    background: linear-gradient(135deg, #000DFF 0%, #6B73FF 100%);
+}
+
+/* Link with Gradient Text */
+.link-gradient {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.link-gradient:hover {
+    background: linear-gradient(135deg, #FFD700 0%, #FF6B6B 100%);
+}
+
 .close-btn:hover {
   color: #000;
 }
