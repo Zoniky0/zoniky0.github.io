@@ -6,17 +6,120 @@
   <title>Zonikyo</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .button-gradient {
-      background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-      border: none;
-      border-radius: 10px;
-      color: white;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background 0.3s ease;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    header {
+      background-color: #1c1c1c;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    main {
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    section {
+      margin-bottom: 50px;
+    }
+    
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background-color: #1c1c1c;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+      background-color: #1c1c1b;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: none; /* Hidden by default */
+    }
+    
+    .popup-content {
+      text-align: center;
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+    
+    /* Gradient Button with Rounded Corners */
+    .button-gradient {
+        background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    
     .button-gradient:hover {
         background: linear-gradient(135deg, #000DFF 0%, #6B73FF 100%);
     }
@@ -32,6 +135,10 @@
     
     .link-gradient:hover {
         background: linear-gradient(135deg, #FFD700 0%, #FF6B6B 100%);
+    }
+    
+    .close-btn:hover {
+      color: #000;
     }
   </style>
 </head>
