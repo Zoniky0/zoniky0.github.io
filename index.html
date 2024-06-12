@@ -1,236 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zonikyo</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        z-index: 9999;
-        pointer-events: auto; /* Allows click-through */
-    }
-    
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #1c1c1c;
-    }
-    
-    header {
-      background-color: #1c1c1c;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    header h1 {
-      font-size: 2.5rem;
-      color: #fff;
-      margin-bottom: 10px;
-    }
-
-    body h2 {
-      color: #fff;
-    }
-
-    body p {
-      color: #fff;
-    }
-
-    nav ul {
-      list-style-type: none;
-    }
-    
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-    
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-    }
-    
-    main {
-      padding: 20px;
-    }
-    
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    
-    section {
-      margin-bottom: 50px;
-    }
-    
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    
-    .btn {
-      display: inline-block;
-      background-color: #d3d3d3;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background-color 0.3s ease;
-    }
-    
-    .btn:hover {
-      background-color: #1c1c1b;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      display: none; /* Hidden by default */
-    }
-    
-    .popup-content {
-      text-align: center;
-    }
-    
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 20px;
-      cursor: pointer;
-      color: #333;
-    }
-    
-    /* Gradient Button with Rounded Corners */
-    .button-gradient {
-        background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-        border: none;
-        border-radius: 12px;
-        color: white;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-    
-    .button-gradient:hover {
-        background: linear-gradient(135deg, #000DFF 0%, #6B73FF 100%);
-    }
-    
-    /* Link with Gradient Text */
-    .link-gradient {
-        background: linear-gradient(135deg, #FF6B6B 0%, #FFD700 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-decoration: none;
-        transition: background 0.3s ease;
-    }
-    
-    .close-btn:hover {
-      color: #000;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zonikyo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="https://i.ibb.co/9qzws76/Untitled-design-3.png" alt="Logo" style="width: 500px; height: auto;">
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#server">Minecraft Server</a></li>
-        <li><a href="#socials">Socials</a></li>
-        <li><a href="#notice">Website Notice</a></li>
-        <li><a href="https://streamelements.com/zonikyo/tip" class="link-gradient">Support the stream!</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="home">
-      <div class="container">
-        <h2>Welcome to the Official Zonikyo Website</h2>
-        <p>A Teenage Minecraft Streamer, who streams mainly Minecraft, but other things as well :)</p>
-        <p>I also have a YouTube channel, so drop a sub there!</p>
-        <br>
-        <a href="https://www.twitch.tv/zonikyo" class="btn">Go to Twitch</a>
-        <a href="https://www.youtube.com/@zonikyo" class="btn">Go to YouTube</a>
-        <button href="https://streamelements.com/zonikyo/tip" class="button-gradient">Support the stream!</button>
-      </div>
-    </section>
-
-     <section id="live">
-      <div class="container">
-        <h2>Live Broadcast</h2>
-         <iframe border-radius="10px" src="https://player.twitch.tv/?channel=zonikyo&parent=www.zonikyo.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-      </div>
-    </section>
-    
-    <section id="server">
-      <div class="container">
-        <h2>Are you looking for the Minecraft Server?</h2>
-        <p>The ZonikyoMC Minecraft server is currently closed to the public.</p>
-        <br>
-        <p>The Minecraft server has currently ceased development until further notice.</p>
-        <br>
-        <a href="https://smp.zonikyo.com" class="btn">Go to the ZonikyoMC Website</a>
-      </div>
-    </section>
-
-    <section id="socials">
-      <div class="container">
-        <h2>Socials</h2>
-        <p>All of Zonikyo's Socials are listed below</p>
-        <br>
-        <a href="https://www.youtube.com/@zonikyo" class="btn">YouTube</a>
-        <a href="https://www.twitch.tv/zonikyo" class="btn">Twitch</a>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <h2>About Zonikyo</h2>
-        <p>Zonikyo is an Australian Teenage Streamer and YouTuber, who loves Computers and Minecraft.</p>
-        <p>Powered by a school laptop, Zonikyo creates a variety of content (ok, fine, just Minecraft), and also has a Minecraft Server running on an old HP EliteBook laptop.</p>
-        <p>Mainly streams on Twitch, and used to create YouTube videos, but has put that on a pause for now.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Zonikyo. All rights reserved.</p>
+    <header>
+        <div class="logo">Zonikyo</div>
+        <nav>
+            <ul>
+                <a href="#" class="gradient-btn">Login or Signup!</a>
+          </ul>
+          
+           
+        </nav>
+    </header>
+    <main>
+      <h2>Hot games!</h2>
       <br>
-      <p>If you really need to contact me, you can see if anyone doxxed me lately :) (im not proving my email sorry)</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+        <section class="games">
+    <a href="https://www.zonikyo.com/shellshockers" class="game-link">
+        <div class="game-tile" data-info="Shellshockers: Shoot eggs">
+            <img src="https://www.zonikyo.com/shellshockers.png" alt="Shellshockers Image">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/smashkarts" class="game-link">
+        <div class="game-tile" data-info="SmashKarts: Smash into karts!">
+            <img src="https://www.zonikyo.com/smashkarts.png" alt="SmashKarts">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/minecraft" class="game-link">
+        <div class="game-tile" data-info="Minecraft: Build your imagination">
+            <img src="https://www.zonikyo.com/minecraft.png" alt="Minecraft Image">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/slope" class="game-link">
+        <div class="game-tile" data-info="Slope: Don't fall off the edge!">
+            <img src="https://www.zonikyo.com/slope.png" alt="Slope Image">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/subwaysurfers" class="game-link">
+        <div class="game-tile" data-info="Subway Surfers: Avoid the trains">
+            <img src="https://www.zonikyo.com/subwaysurfers.png" alt="Subway Surfers Image">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/spacewaves" class="game-link">
+        <div class="game-tile" data-info="Spacewaves: Dodge stuff!">
+            <img src="https://www.zonikyo.com/spacewaves.png" alt="Spacewaves Image">
+            <div class="info"></div>
+        </div>
+    </a>
+    <a href="https://www.zonikyo.com/moregames" class="game-link">
+        <div class="game-tile" data-info="More games are in Development and are going to be released soon! Click to learn more.">
+            <img src="https://www.zonikyo.com/moregames.png" alt="More Games">
+            <div class="info"></div>
+        </div>
+    </a>
+    <!-- More game tiles as needed -->
+</section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Zonikyo. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
