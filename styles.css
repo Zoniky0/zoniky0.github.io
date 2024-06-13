@@ -126,7 +126,7 @@ footer {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background: linear-gradient(#FFC0CB, #FFA500);
+    background: linear-gradient(to right, #0000FF, #FFA500);
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -135,7 +135,7 @@ footer {
 }
 
 .gradient-btn:hover {
-    background: linear-gradient(#FFC0CB, #FFA500);
+    background: linear-gradient(to right, #0000FF, #FFA500);
 }
 
 .game-container {
