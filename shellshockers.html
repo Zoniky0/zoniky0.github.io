@@ -15,7 +15,11 @@
         <div class="logo">Zonikyo</div>
         <nav>
             <ul>
-                <li><a class="gradient-btn" href="authpro:login">Login or Signup</a></li>
+                <span id="ap_welcome"></span>
+                <script type="text/javascript">
+                    var login = "User"; // Replace with actual login variable
+                    document.getElementById("ap_welcome").innerHTML = `<button class="gradient-btn">Welcome, ${login}</button>`;
+                </script>
             </ul>
         </nav>
     </header>
