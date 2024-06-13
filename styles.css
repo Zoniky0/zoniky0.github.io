@@ -137,3 +137,32 @@ footer {
 .gradient-btn:hover {
     background: linear-gradient(#FFC0CB, #FFA500);
 }
+
+.game-container {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.game-container iframe {
+     width: 100%;
+     height: 600px; /* Adjust as necessary */
+     border: none;
+     border-radius: var(--border-radius);
+}
+
+/* Style for the text content section */
+.text-content {
+     padding: 20px;
+     background-color: var(--bg-color);
+     border-radius: var(--border-radius);
+}
+
+.text-content h1 {
+    margin-bottom: 20px;
+}
+
+.text-content p {
+     margin-bottom: 15px;
+    line-height: 1.6;
+}
